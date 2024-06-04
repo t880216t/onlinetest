@@ -130,7 +130,8 @@ export async function addTest(request) {
 
     await testRunnerQueue.add(
       {
-        url: url.toLowerCase(),
+        // url: url.toLowerCase(),
+        url,
         config,
         extras,
         scripting,
