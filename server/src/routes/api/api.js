@@ -170,12 +170,13 @@ api.post(
 
     try {
       const userConfig = request.body;
-      let url = userConfig._[0];
+      let url = userConfig.url || userConfig._[0];
       let scripting = userConfig.api.scripting;
       let testType = userConfig.api.testType;
       let scriptingName = userConfig.api.scriptingName;
       let label = userConfig.api.label;
       let priority = userConfig.api.priority;
+      let extras = userConfig.api.extras;
 
       const location = userConfig.api.location;
 
@@ -191,7 +192,8 @@ api.post(
         scriptingName,
         label,
         testType,
-        priority
+        priority,
+        extras
       );
       response.json({ id });
     } catch (error) {

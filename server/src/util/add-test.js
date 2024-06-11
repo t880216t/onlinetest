@@ -162,7 +162,8 @@ export async function addTestFromAPI(
   scriptingName,
   label,
   testType,
-  priority
+  priority,
+  extras
 ) {
   const deviceId =
     get(userConfig, 'browsertime.firefox.android.deviceSerial') ||
@@ -185,7 +186,8 @@ export async function addTestFromAPI(
     scripting,
     label,
     slug,
-    config
+    config,
+    extras
   );
 
   logger.info(`Adding test with id ${jobId} in queue ${queue} using the API`);
@@ -207,8 +209,10 @@ export async function addTestFromAPI(
 
   await testRunnerQueue.add(
     {
-      url: url.toLowerCase(),
+      // url: url.toLowerCase(),
+      url,
       config,
+      extras,
       scripting,
       scriptingName,
       label
