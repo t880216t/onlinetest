@@ -27,7 +27,7 @@ log:
 
 # Make sure only users with the correct key can add tests
 api:
-  key:
+  key: jhde7gFArda33Saa1
 
 # Regular expression that needs to match the domain that you test. If there's a miss match, no tests will run.
 validTestDomains: "^(?:[\\w-]+\\.)*wikipedia\\.org$"
@@ -58,7 +58,7 @@ html:
   # You can choose to either show the log from sitespeed.io or a random AI generated image.
   showRandomAIImage: false
   # Show the Lighthouse box
-  useLighthouse: false
+  useLighthouse: true
 
 # How to format dates
 dateformat: "YYYY-MM-DD HH:mm:ss"

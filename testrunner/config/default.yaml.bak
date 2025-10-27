@@ -4,40 +4,22 @@ location:
   name: "default"
   # The type of tests that you can run
   setup:
-#    - name: "Desktop Browsers"
-#      type: "desktop"
-#      # If you do not use Docker, you need to make sure you
-#      # install the browsers yourself
-#      browsers: ["chrome", "firefox", "edge"]
-#      connectivity: ["native", "3g", "4g", "cable"]
-#      # If you choose to run sitespeed.io docker containers make sure
-#      # to run: sudo modprobe ifb numifbs=1
-#      # on the host so that setting connectivity will work
-#      useDocker: false
-
     - name: "Desktop Browsers"
       type: "desktop"
-      # If you do not use Docker, you need to make sure you
+      # If you do not use Docker, you need to make sure you 
       # install the browsers yourself
-      browsers: [ "chrome", "firefox", "edge" ]
-      connectivity: [ "native", "3g", "4g", "cable" ]
-      # If you choose to run sitespeed.io docker containers make sure
-      # to run: sudo modprobe ifb numifbs=1
+      browsers: ["chrome", "firefox", "edge"]
+      connectivity: ["native", "3g", "4g", "cable"]
+      # If you choose to run sitespeed.io docker containers make sure 
+      # to run: sudo modprobe ifb numifbs=1 
       # on the host so that setting connectivity will work
-      # Also remember that localhost inside the container isn't automatically
-      # the same as localhost on the server:
-      # https://www.sitespeed.io/documentation/sitespeed.io/docker/#access-localhost
-      # That means if you run everything locally and want to use sitespeed.io docker 
-      # containers, you need to set --s3.endpoint to something else than 127.0.0.1.
-      # On Mac you can use --s3.endpoint http://host.docker.internal:9000 and on Linux
-      # you can use yoru actual IP.
-      useDocker: true
+      useDocker: false
   
     - name: "Emulated Mobile"
       type: "emulatedMobile"
       browsers: ["chrome"]
       connectivity: ["native", "3g", "4g", "cable"]
-      useDocker: true
+      useDocker: false
 
     # Here's an example of setting up a Android phone
     #- name: "Android"
@@ -50,11 +32,10 @@ location:
 
 # Where to connect to the message broker that is a Redis like thing
 redis:
-  port: 6379
-  host: 127.0.0.1
+  port: null
+  host: null
   password: jgsay7f2fgfgda6acCa7g()jaba51!
-  tls: null
-  
+
 # Verbose log level or not
 log:
   verbose: false

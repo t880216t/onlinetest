@@ -1,10 +1,11 @@
 {
     "s3": {
-        "endpoint": "http://127.0.0.1:9000",
+        "endpoint": "http://10.10.58.93:9000",
+        "port": 9000,
         "bucketname": "sitespeedio",
         "key": "sitespeedio",
         "secret": "tracksofmytears",
         "region": "motown"
     },
-    "resultBaseURL": "http://127.0.0.1:9000/sitespeedio"
+    "resultBaseURL": "http://10.10.58.93:9000/sitespeedio"
 }
